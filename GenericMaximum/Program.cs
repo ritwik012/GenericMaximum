@@ -10,7 +10,7 @@ namespace GenericsMaximum
             while (flag)
             {
                 Console.WriteLine("Welcome To Generic Maximum Problems");
-                Console.WriteLine("Enter the Program that want to be executed : \n 1. Maximum Integer \n 2. Exit");
+                Console.WriteLine("Enter the Program that want to be executed : \n 1. Maximum Integer \n 2. Maximum Float \n 3. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +23,14 @@ namespace GenericsMaximum
                         Console.WriteLine("The Maximum Number is : " + result);
                         break;
                     case 2:
+                        Console.WriteLine("Enter First number, Second number, Third number : ");
+                        double firstNum = Convert.ToDouble(Console.ReadLine());
+                        double secondNum = Convert.ToDouble(Console.ReadLine());
+                        double thirdNum = Convert.ToDouble(Console.ReadLine());
+                        double res = MaximumComputation.FindMax(firstNum, secondNum, thirdNum);
+                        Console.WriteLine("The Maximum Number is : " + res);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
