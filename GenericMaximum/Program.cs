@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace GenericsMaximum
 {
     class Program
@@ -10,7 +11,7 @@ namespace GenericsMaximum
             while (flag)
             {
                 Console.WriteLine("Welcome To Generic Maximum Problems");
-                Console.WriteLine("Enter the Program that want to be executed : \n 1. Maximum Integer \n 2. Maximum Float \n 3. Exit");
+                Console.WriteLine("Enter the Program that want to be executed : \n 1. Maximum Integer \n 2. Maximum Float \n 3. Largest String \n 4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -31,6 +32,14 @@ namespace GenericsMaximum
                         Console.WriteLine("The Maximum Number is : " + res);
                         break;
                     case 3:
+                        Console.WriteLine("Enter Three Strings : ");
+                        string firstName = Convert.ToString(Console.ReadLine());
+                        string secondName = Convert.ToString(Console.ReadLine());
+                        string thirdName = Convert.ToString(Console.ReadLine());
+                        string largest = MaximumComputation.FindMax(firstName, secondName, thirdName);
+                        Console.WriteLine("The Largest String is : " + largest);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
